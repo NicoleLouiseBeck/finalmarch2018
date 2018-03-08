@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', type='text/css', href='stylesheets\startbootstrap-new-age-gh-pages\css\new-age.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets\layout.css')
+    link(rel='icon', type='image/png', href='images/favicon.png')
+    title Virtual Waifu
+  body
+    .nav2
+      ul
+        li.home
+          a(href='home') LogOut
+    .wrapper
+      .chat-box
+        .title-area
+          .title Chat with support
+          .close-icon X
+        .message-area
+          | the message area
+        .chat-input-area
+          input.form-control.textarea-input(type='text')
+          button.btn.btn-primary.sendmessage-btn Send
+    ul
+        each user, i in userlist
+            li
+                a(href="mailto:#{user.email}")= user.username

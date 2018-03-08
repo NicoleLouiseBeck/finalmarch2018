@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', type='text/css', href='stylesheets\startbootstrap-new-age-gh-pages\css\new-age.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets\layout.css')
+    link(rel='icon', type='image/png', href='images/favicon.png')
+    title Virtual - login
+  body
+    .wrapper
+      .nav
+        ul
+          li.home
+            a(href='home') Home
+          li.login
+            a(href='#') Login
+          li.register
+            a(href='register') Register
+      header
+        h1.large Virtual Waifu!
+        div
+          form.form-auth(ng-submit='register()')
+            h2 Login
+            p.text-warning {{error_message}}
+            input.form-control(type='username', ng-model='user.username', placeholder='Username')
+            br
+            input.form-control(type='password', ng-model='user.password', placeholder='Password')
+            br
+            input.btn-primary(type='submit', value='Register')
